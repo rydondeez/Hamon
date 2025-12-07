@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HAMON – Boisson Énergétique</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background: #ffd23f; color: #5e1675; }
+    header { background: #ffd23f; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 999; }
+    .container { width: 90%; max-width: 1200px; margin: auto; }
+    nav a { margin: 0 15px; text-decoration: none; color: #337357; font-weight: bold; transition: 0.3s; }
+    nav a:hover { color: #5e1675; }
+    .hero { display: flex; align-items: center; justify-content: space-between; padding: 80px 0; }
+    .hero-text h1 { font-size: 3rem; font-weight: 900; }
+    .hero-text p { margin-top: 10px; color: #555; font-size: 1.1rem; }
+    .btn-red { background: #5e1675; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; }
+    .img-placeholder { width: 380px; height: 380px; background: #ddd; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: #666; font-size: 1rem; }
+
+    /* Produits */
+    .products { padding: 60px 0; }
+    .products h2 { font-size: 2.5rem; font-weight: 800; }
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }
+    .card { background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
+    .card-img { width: 100%; background: #eee; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #777; }
+    .card h3 { margin-top: 15px; font-size: 1.3rem; }
+    .card p { color: #666; margin-top: 5px; }
+
+    /* Contact */
+    .contact-section { background: white; padding: 60px; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin: 60px auto; max-width: 800px; }
+    .contact-section h2 { font-size: 2rem; font-weight: 800; }
+    .contact-section form { margin-top: 20px; display: flex; flex-direction: column; gap: 15px; }
+    input, textarea { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem; }
+    button { padding: 12px; background: #5e1675; color: white; border: none; font-size: 1rem; border-radius: 8px; cursor: pointer; }
+    button:hover { background: #5e1675; }
+
+    footer { text-align: center; padding: 20px; margin-top: 40px; color: #555; }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container" style="display: flex; align-items:center; justify-content: space-between;">
+      <h1 style="font-size: 1.8rem; font-weight: 900; color:#5e1675; font-family: brittany, arial;">HAMON</h1>
+      <nav>
+        <a href="#hero">Accueil</a>
+        <a href="#products">Produits</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="container hero" id="hero">
+    <div class="hero-text">
+      <h1>La Boisson Énergétique qui Te Boost</h1>
+      <p>HAMON te donne l’énergie dont tu as besoin pour performer toute la journée.</p>
+      <a href="#products" class="btn-red">Voir les produits</a>
+    </div>
+    <div class="img-placeholder"><img class="img-placeholder" src="images/Hamon (2).png" alt="hamon"></div>
+  </section>
+
+  <!-- PRODUITS -->
+  <section class="container products" id="products">
+    <h2>Nos Saveurs</h2>
+    <div class="product-grid">
+      <div class="card">
+        <div class="card-img"><img class="card-img" src="images/Hamon (2).png" alt="img"></div>
+        <h3>HAMON Classic</h3>
+        <p>Le goût original avec une énergie puissante.</p>
+      </div>
+      <div class="card">
+        <div class="card-img"><img class="card-img" src="images/Copie de Hamon.png" alt="hmn2"></div>
+        <h3>HAMON Zero</h3>
+        <p>Sans sucre, même intensité.</p>
+      </div>
+      <div class="card">
+        <div class="card-img"><img class="card-img" src="images/Copie de Killer Queen.png" alt="kc"></div>
+        <h3>HAMON Tropical</h3>
+        <p>Un goût frais et fruité pour l’été.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <h2>Contact</h2>
+    <p>Laisse-nous un message, nous te répondrons rapidement.</p>
+
+    <form onsubmit="event.preventDefault(); alert('Message envoyé ! (interface uniquement)');">
+      <input type="text" placeholder="Nom complet" required />
+      <input type="email" placeholder="Email" required />
+      <textarea rows="6" placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 HAMON – Boisson Énergétique
+  </footer>
+</body>
+</html>
